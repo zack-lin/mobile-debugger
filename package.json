@@ -1,0 +1,19 @@
+{
+    "name": "mobile-debugger",
+    "version": "1.0.0",
+    "description": "Print info from website base on node",
+    "main": "index.js",
+    "author": {
+        "name": "Zack Lin",
+        "email": "linzegia@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:zack-lin/mobile-debugger.git"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "socket.io": "~1.2.1",
+        "colors": "~0.6.2"
+    }
+}
