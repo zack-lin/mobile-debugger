@@ -1,6 +1,6 @@
 {
     "name": "mobile-debugger",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Print info from website base on node",
     "main": "index.js",
     "author": {
