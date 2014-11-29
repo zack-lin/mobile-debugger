@@ -1,7 +1,33 @@
 Mobile debugger
 ========
+	
+	移动前端通用调试工具
 
-<script src="http://your-io-server/mobile-debugger/log.js"></script>	
+Installation
+========
+
+    $ npm install mobile-debugger
+
+Quick Start
+========
+
+前端页面注入脚本
+
+  	<script src="http://your-io-server/mobile-debugger/log.js"></script>	
+
+Nodejs 服务端
+
+	var Debugger = require('mobile-debugger');
+    var debug = new Debugger(app, 'development');
+
+  	debug.start();
+
+  打点方法
+    
+  - log#log  	
+  - log#dir
+  - log#info
+  - log#error
 
 License
 =======
