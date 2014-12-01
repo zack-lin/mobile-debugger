@@ -29,6 +29,8 @@ Nodejs 服务端
   - log#info
   - log#error
 
+自动监听页面报错，同步到 node cli
+
 License
 =======
 
