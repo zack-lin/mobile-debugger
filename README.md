@@ -1,3 +1,5 @@
+![mobile-debugger](https://badge.fury.io/js/mobile-debugger.svg)
+
 Mobile debugger
 ========
 	
