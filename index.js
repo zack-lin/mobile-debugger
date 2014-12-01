@@ -28,7 +28,7 @@ Log.prototype.start = function () {
           }
         });
       }).final(function(){
-          fs.readFile(__dirname + '/lib/log.js', function (err, data) {
+          fs.readFile(__dirname + '/lib/log.min.js', function (err, data) {
             if (err){
               console.log(err);
             } else {
