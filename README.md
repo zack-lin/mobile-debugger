@@ -8,10 +8,9 @@ Mobile debugger
 Installation
 ========
 
-    $ npm install mobile-debugger
+适用于 Express 3.x
 
-Quick Start
-========
+    $ npm install mobile-debugger
 
 前端页面注入脚本
 
@@ -24,7 +23,10 @@ Nodejs 服务端
 
   	debug.start();
 
-  打点方法
+Quick Start
+========
+
+打点方法
     
   - log#log  	
   - log#dir
