@@ -1,6 +1,6 @@
 {
     "name": "mobile-debugger",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "description": "Print info from website base on node",
     "main": "index.js",
     "author": {
@@ -14,7 +14,7 @@
     "license": "MIT",
     "dependencies": {
         "socket.io": "~1.2.1",
-        "colors": "~0.6.2",
+        "colors": "~1.1.2",
         "chainjs": "0.1.0-1"
     }
 }

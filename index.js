@@ -2,8 +2,16 @@ var http = require('http');
 var fs = require('fs');
 var sio = require('socket.io');
 var Chain = require('chainjs');
-require('colors');
-var colorTheme = ['grey', 'green', 'yellow', 'red', 'blue', 'rainbow', 'cyan'];
+var colors = require('colors');
+colors.setTheme({
+  info: 'green',
+  data: 'grey',
+  help: 'cyan',
+  warn: 'yellow',
+  debug: 'blue',
+  error: 'red'
+});
+var level = ['debug', 'info', 'warn', 'error'];
 
 function Log(app, mode) {
   this.app = app;
@@ -42,20 +50,20 @@ Log.prototype.start = function () {
       io = sio.listen(serv);
 
     serv.listen(app.get('port'));
-    console.log(('[Debugger] listening on ' + app.get('port'))['cyan']);
+    console.log(colors.help('[Debugger] listening on ' + app.get('port')));
 
     io.sockets.on('connection', function (socket) {
-      console.log('[Debugger] connection has built.'['cyan']);
+      console.log(colors.help('[Debugger] connection has built.'));
       socket.on('LOG MESSAGE', function (data) {
         data = JSON.parse(data);
         var infos = data['args'];
         if (data['level'] === 4) {
           infos.forEach(function (i) {
-            console.log('[Debugger]', i[colorTheme[4]]);
+            console.log('[Debugger]', colors[level[4]](i));
           });
         } else {
           infos.forEach(function (i) {
-            console.log('[Debugger]', i[colorTheme[data['level']]]);
+            console.log('[Debugger]', colors[level[data['level']]](i));
           });
         }
       });
